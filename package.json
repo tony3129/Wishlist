@@ -1,0 +1,24 @@
+{
+  "name": "wishlist",
+  "version": "1.0.0",
+  "description": "wishlist bcrypt client-sessions ejs jquery",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "wishlist",
+    "bcrypt",
+    "client-sessions",
+    "ejs",
+    "jquery"
+  ],
+  "author": "tony liu",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}

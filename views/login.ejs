@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="main">
+        <div class="formFormatContainer">
+            <h2>Wishlist Login</h2>
+            <form class="formFormatInfo" action="/login" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+                <a href="/register">No account? Register here</a>
+                <% if(message) { %>
+                    <div id="loginMessage">
+                        <p><%= message %></p>
+                    </div>
+                <% } %>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
