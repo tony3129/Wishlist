@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/wishList/wishList.js"></script>
+    <script src="/js/sideNav.js" defer></script>
+    <script src="/js/backToTop.js"  defer></script>
+</head>
+<body>
+    <header class="wishListHeader">
+        <!-- allow logout functionality -->
+        <a href="/logout">Logout</a>
+    </header>
+    <!-- for consistent layout on website -->
+    <div id="main">
+        <div id="wishListContainer">
+            <h2>Your Wishlist</h2>
+            <div class="gridContainer">
+                <% items.forEach(item => { %>
+                    <a href="<%= item.link %>" class="card">
+                        <div class="cardDetailsContainer">
+                            <h4><b>
+                                <%= item.title%>
+                            </b></h4>
+                            <p>
+                                <%= item.desc %>
+                            </p>
+                            <p>
+                                $<%= item.price %>
+                            </p>
+                            <form class="deleteWishList"action="/wishlist/delete/<%= item.itemID %>" method="POST">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </div>
+                    </a>
+                <% }); %>
+            </div>
+        </div>
+        <div class="formFormatContainer">
+            <form id ="addWishList" class="formFormatInfo" action="/wishlist/add" method="POST">
+                <label for="title">Item Name:</label>
+                <input type="text" id="title" name="title" required>
+                <label for="desc">Description:</label>
+                <textarea id="desc" name="desc"></textarea>
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price">
+                <label for="link">Link:</label>
+                <input type="text" id="link" name="link" required>
+                <button type="submit">Add Item</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
