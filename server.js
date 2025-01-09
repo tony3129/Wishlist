@@ -16,6 +16,8 @@ const requireLogin = require('./middleware/wishListLogin.js');
 const express = require('express');
 const app = express();
 
+const HTTP_PORT = process.env.PORT || 3000;
+
 //let express know to use ejs files to render views
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, '/views'));
