@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4d4b4b;
+}
+
+a, 
+button{
+    font-size: 1.5em;
+    border: 0;
+    padding-right: .5em;
+    padding-left: .5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    transition: margin-left .5s ease;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.formFormatContainer, 
+#registerContainer,
+#wishListContainer{
+    width: 100%;
+    max-width: 1000px;
+}
+
+.formFormatContainer button, 
+.formFormatContainer a{
+    background-color: rgb(233, 237, 201);
+    margin-top: 1vh;
+}
+
+.formFormatContainer a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding: 1px 0;
+}
+
+#message{
+    height: 20vh;
+}
+ 
+.formFormatInfo
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 300px); /* 3 columns, each 300px wide */
+    grid-auto-rows: 400px; /* Each row is 400px */
+    gap: 50px; /* give spacing to each card, so transition doesn't overlap other cards */
+    margin-bottom: 20px;
+}
+
+#wishListContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.wishListHeader{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 250px;
+    height: 400px;
+}
+
+.cardDetailsContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.cardImgContainer{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+a:hover, 
+button:hover, 
+.card:hover{
+    background-color: rgb(204, 213, 174) !important;
+    transform: scale(1.02) !important;
+}
+
+.deleteWishList button:hover{
+    background-color: rgb(216, 178, 178) !important;
+}
+
+@media (max-width: 800px) {
+
+    #main {
+        padding: 10px;
+    }
+    header {
+        flex-wrap: wrap; 
+    }
+
+    .gridContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+}
+
