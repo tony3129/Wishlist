@@ -25,6 +25,7 @@ $(document).ready(function(){
         });
     }
 
+    
     $('#addWishList').on('submit', function(event){
         event.preventDefault();
 
